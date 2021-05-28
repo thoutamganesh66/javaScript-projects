@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TODO List</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="app.js"></script>
+</head>
+<body>
+	<header class="bg-success text-white p-5">
+		<div class="container">
+			<div>
+				<div>
+					<font face="Comic sans MS" size="11" color="black">
+						<strong>TODO List</strong>
+					</font>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container mt-3">
+		<h2>Add Items</h2>
+
+		<!-- Display edit success -->
+		<label id="lblsuccess" class="text-success" style="display: none;"></label>
+
+		<form id="addForm">
+			<div class="row">
+				<div class="col-lg-7 col-md-7 col-sm-7">
+					<input type="text" onkeyup="toggleButton(this,'submit')" id="item" class="form-control">
+				</div>
+
+				<div class="col-lg-5 col-md-5 col-sm-5">
+					<input type="submit" value="Submit" id="submit" class="btn btn-dark" disabled>
+				</div>
+			</div>
+		</form>
+
+		<h3 class="mt-4">Tasks</h3>
+
+		<form id="addForm">
+			<ul class="list-group" id="items"></ul>
+		</form>
+	</div>
+</body>
+</html>
